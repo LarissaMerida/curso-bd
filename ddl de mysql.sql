@@ -1,4 +1,4 @@
--- flix.artista definition
+-- katieFlix.artista definition
 
 CREATE TABLE `artista` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -9,7 +9,7 @@ CREATE TABLE `artista` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- flix.avaliacao definition
+-- katieFlix.avaliacao definition
 
 CREATE TABLE `avaliacao` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -21,7 +21,7 @@ CREATE TABLE `avaliacao` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- flix.categoria definition
+-- katieFlix.categoria definition
 
 CREATE TABLE `categoria` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -32,7 +32,7 @@ CREATE TABLE `categoria` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- flix.filme definition
+-- katieFlix.filme definition
 
 CREATE TABLE `filme` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -45,7 +45,7 @@ CREATE TABLE `filme` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- flix.filme_artista definition
+-- katieFlix.filme_artista definition
 
 CREATE TABLE `filme_artista` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -58,7 +58,7 @@ CREATE TABLE `filme_artista` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- flix.filme_avaliacao definition
+-- katieFlix.filme_avaliacao definition
 
 CREATE TABLE `filme_avaliacao` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -71,7 +71,7 @@ CREATE TABLE `filme_avaliacao` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- flix.filme_categoria definition
+-- katieFlix.filme_categoria definition
 
 CREATE TABLE `filme_categoria` (
   `id` bigint NOT NULL AUTO_INCREMENT,

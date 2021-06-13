@@ -13,3 +13,11 @@
   - Após instalar as dependências, pode ativar o ambiente com o comando *pipenv shell*
   - Para rodar o projeto: *python manage.py runserver*
   - É possível visualizar o projeto no navegador por meio do link *localhost:8000*
+
+
+
+Referências
+
+- Foi utilizada a api [The movie db](https://developers.themoviedb.org/3/getting-started/introduction) para popular o banco usando script python
+
+  
