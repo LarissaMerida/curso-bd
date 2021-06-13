@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+
+{% block conteudo  %}
+
+    <section class="container mt-4">
+
+        <table class="table table-bordered">
+            <thead class='text-center'>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Título</th>
+                <th scope="col">Sinopse</th>
+                <th colspan="2">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for filme in filmes %}
+                    <tr>
+                        <th scope="row">{{ filme.id }}</th>
+                        <td>{{ filme.titulo }}</td>
+                        <td>{{ filme.sinopse }}</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+{% endblock %}
