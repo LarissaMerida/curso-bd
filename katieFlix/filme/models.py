@@ -7,7 +7,7 @@ from artista.models import Artista
 class Filme(models.Model):
     titulo = models.CharField(max_length=255, verbose_name="Título")
     sinopse = models.TextField(verbose_name="Sinopse" )
-    lancamento = models.DateTimeField()
+    lancamento = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

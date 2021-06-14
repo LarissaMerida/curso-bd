@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from categoria.models import *
 from .models import *
+from .forms import *
 
 # Create your views here.
 
@@ -38,3 +39,37 @@ def pesquisa(request):
 
     filmes = Filme.objects.raw('select * from filme where titulo like %s or sinopse like %s  order by id asc ', ['%'+pesquisa+'%', '%'+pesquisa+'%'])
     return render(request, "index.html", {"categorias": categorias, "filmes": filmes})
+
+def criar_filme(request):
+    if request.method == 'POST':
+        form = FilmeForm(request.POST)
+
+        if form.is_valid():
+
+            form.save()
+            return redirect('home')
+    else:
+        form = FilmeForm()
+
+    categorias = Categoria.objects.all()
+    return render(request, 'filme/criar_filme.html', {'form': form, 'categorias': categorias})
+
+def editar_filme(request, pk):
+    categorias = Categoria.objects.all()
+
+    filme = Filme.objects.get(pk=pk)
+    form = FilmeForm(request.POST or None, instance=filme)
+    
+    if form.is_valid():
+        form.save()
+        return redirect('home')
+    
+    context = {'filme': filme, 'form': form, 'categorias': categorias}
+    return render(request, 'filme/criar_filme.html', context)
+
+
+def deletar_filme(request, pk):
+    filme = Filme.objects.get(pk=pk)
+    filme.delete()
+
+    return redirect('home')

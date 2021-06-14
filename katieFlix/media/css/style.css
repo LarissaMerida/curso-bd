@@ -5,3 +5,8 @@
     font-size: 40px;
     font-weight: bold;
 }
+
+.button_plus {
+    float: right;
+    padding: 16px;
+}

@@ -28,6 +28,11 @@ urlpatterns = [
     path('categoria/<id>', categoria, name='categoria'),
     path('pesquisa/', pesquisa, name='pesquisa'),
 
+    # filme
+    path('criar_filme', criar_filme, name="criar_filme"),
+    path('editar_filme/<int:pk>/', editar_filme, name="editar_filme"),
+    path('deletar_filme/<int:pk>/', deletar_filme, name="deletar_filme"),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

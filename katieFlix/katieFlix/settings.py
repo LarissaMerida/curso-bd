@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'artista.apps.ArtistaConfig',
     'avaliacao.apps.AvaliacaoConfig',
     'categoria.apps.CategoriaConfig',
-    'filme.apps.FilmeConfig'
+    'filme.apps.FilmeConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

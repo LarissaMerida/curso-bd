@@ -8,6 +8,7 @@ django = "*"
 django-environ = "*"
 environ = "*"
 pymysql = "*"
+django-crispy-forms = "*"
 
 [dev-packages]
 
